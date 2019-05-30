@@ -9,17 +9,3 @@
 ## 词法分析
 
 ## 语法分析
-
-### EBNF of Hina
-
-    program   ::= {statement}<EOF>;
-    statement ::= define | assign | func | funccall | if;
-    define    ::= <LET> <IDENT> <ASSIGN> expr;
-    assign    ::= <IDENT> <ASSIGN> expr;
-    expr      ::= func | funccall | <IDENT> | <INT> | <FLOAT> | <CHAR> | <STRING> | calc;
-    operator  ::= <ADD> | <SUB> | <MUL> | <QUO> | <REM> | <AND> | <OR> | <XOR> | <SHL> | <SHR>
-    condition ::= 
-    calc      ::= <IDENT>operator[<IDENT>]
-    func      ::= <LPAREN>[<IDENT>{<COMMA><IDENT>}]<RPAREN><LBRACE>program<RBRACE>;
-    funcall   ::= <IDENT><LPAREN>[expr{,expr}]<RPAREN>;
-    if        ::= 
